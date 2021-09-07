@@ -1,3 +1,9 @@
+{% set css %}
+    {% inclue "/css/template3.css" %}
+{% endset %}
+<style>
+    {{ css | safe }}
+</style>
 <div class="home-container">     
     <div class="widget title-box">
         <img src="{{ logo | url }}">

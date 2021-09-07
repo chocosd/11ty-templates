@@ -1,4 +1,10 @@
-<div class="home-container">  
+{% set css %}
+    {% inclue "/css/template1.css" %}
+{% endset %}
+<style>
+    {{ css | safe }}
+</style>
+<div class="home-container">
     <div class="central-container">
         <img class="logo" src="{{ tem1.logo | url }}">
         <div class="content-container">

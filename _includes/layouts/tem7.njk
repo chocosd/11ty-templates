@@ -1,3 +1,9 @@
+{% set css %}
+    {% inclue "/css/template7.css" %}
+{% endset %}
+<style>
+    {{ css | safe }}
+</style>
 <div class="home-container">
     <div class="header-panel">
         <div class="header-text">
@@ -19,7 +25,7 @@
                     </div>
                 </div>
             </cc-open-module>
-            
+
         </div>
         <div class="bottom-line">
             <span>{{ temScroll }}</span>

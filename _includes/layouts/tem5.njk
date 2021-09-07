@@ -1,3 +1,9 @@
+{% set css %}
+    {% inclue "/css/template5.css" %}
+{% endset %}
+<style>
+    {{ css | safe }}
+</style>
 <div class="home-container dis-flex">
     <div class="header">
         <img src="{{ tem.logo | url }}">

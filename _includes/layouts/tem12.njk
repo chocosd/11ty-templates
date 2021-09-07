@@ -1,3 +1,9 @@
+{% set css %}
+    {% inclue "/css/template12.css" %}
+{% endset %}
+<style>
+    {{ css | safe }}
+</style>
 <div class="home-container">    
     <div class="logo-container">
         <img src="{{ tem12.header.img | url }}">

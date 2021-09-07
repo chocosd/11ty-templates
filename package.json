@@ -1,14 +1,15 @@
 {
   "name": "11ty-templates",
   "version": "1.0.0",
-  "description": "",
+  "description": "For CC - testing a quick and easy template builder",
   "main": "index.js",
   "scripts": {
+    "watch:eleventy": "eleventy --serve",
     "start": "eleventy --serve",
-    "build": "eleventy" 
+    "build": "eleventy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Steven Dix",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
