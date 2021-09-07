@@ -1,0 +1,23 @@
+<div class="home-container dis-flex">
+    <div class="header-panel">
+        <div class="header-text"> 
+            <img src="{{ tem10.header | url }}">
+            <h2>{{ tem10.header.title }}</h2>
+            <p>{{ tem10.header.desc }}</p>
+        </div>
+    </div>
+    <div class="mobile-image">
+        <img src="{{ tem10. mob | url }}">
+    </div>
+    <div class="menu-container dis-flex">
+        <cc-open-module class="widget dis-flex" id="{{ tem10.widget.id }}">
+            <div class="icon-back dis-flex">
+                <i class="material-icons">{{ icon }}</i>
+            </div>
+            <span>{{ widget.desc }}</span>
+        </cc-open-module>
+        <div class="logo">
+            <img src="{{ tem10.logo | url }}">
+        </div>
+    </div>
+</div>

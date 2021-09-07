@@ -1,0 +1,11 @@
+{% macro overlay(title, description, arrow)%}
+<div class="overlay">
+    <div class="arrow-container">
+        <div class="text-container">
+            <h2>{{ title }}</h2>
+            <span>{{ description }}</span>
+        </div>
+        <img class="arrow" src="{{ arrow | url }}">
+    </div>
+</div>
+{% endmacro %}

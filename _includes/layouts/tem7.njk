@@ -1,0 +1,28 @@
+<div class="home-container">
+    <div class="header-panel">
+        <div class="header-text">
+            <img src="{{ widget.logo }}">
+            <h1>{{ temp7.title }}</h1>
+            <p>{{ temp7.desc }}</p>
+        </div>
+    </div>
+    <div class="meeting-panel">
+        <div class="h-slider">
+
+            <cc-open-module class="meeting" id="{{ widget.link }}">
+                <h2>{{ widget.title }}</h2>
+                <div class="image" style="background-image:url('{{ widget.bgImg }}')"></div>
+                <div class="meeting-bar">
+                    <p>{{ widget.desc }}</p>
+                    <div class="cta">
+                        <span>{{ widget.cta }}</span>
+                    </div>
+                </div>
+            </cc-open-module>
+            
+        </div>
+        <div class="bottom-line">
+            <span>{{ temScroll }}</span>
+        </div>
+    </div>
+</div>

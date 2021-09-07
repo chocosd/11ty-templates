@@ -1,0 +1,16 @@
+<div class="home-container">
+    <div class="header-panel">
+        <div>
+            <img src="{{ temp9.headerImg | url }}">
+            <h1>{{ temp9.headerTitle }}</h1>
+            <p>{{ temp9.headerDesc }}</p>
+        </div>
+    </div>    
+    <div class="menu-container">
+        <cc-open-module class="widget" id="{{ temp9.widgetid }}" style="background-image:url('{{ temp9.widgetImg | url }}')">
+            <div class="cta">
+               <span>{{Agenda}}</span>
+            </div> 
+        </cc-open-module>   
+    </div>
+</div>

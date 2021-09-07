@@ -1,0 +1,33 @@
+{% from "/macros/tem2_macros.njk" import overlay %}
+{% set css %}
+    {% inclue "/css/template2.css" %}
+{% endset %}
+<!-- <style>
+    {{ css | safe }}
+</style> -->
+<div class="home-container">
+    <div class="feature-panel">
+        <div class="title-container">
+            <img src="{{ widgets.logo | url }}">
+            <p>{{ widgets.mainDesc }}</p>
+        </div>
+        {{ overlay({{widgets.title}}, {{widgets.desc}}, {{widgets.arrow | url}}) }}
+    </div>
+    
+    <div class="large-panel">
+        {{ overlay({{widgets.title}}, {{widgets.desc}}, {{widgets.arrow | url}}) }}
+    </div>
+    <!-- {% for widget in widgets %} -->
+    <cc-open-module class="widget" id="xxxxx" style="background-image:url('{{ widgets.background | url }}')">
+        <div class="gradient-container">
+            <div class="arrow-container">
+                <div class="text-container">
+                    <h2>{{ widgets.title }}</h2>
+                    <span>{{ widgets.desc }}</span>
+                </div>
+                <img class="arrow" src="{{ widgets.arrow | url }}">
+            </div>
+        </div>
+    </cc-open-module>
+    <!-- {% endfor %} -->
+</div>

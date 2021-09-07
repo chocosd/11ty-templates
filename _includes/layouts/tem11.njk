@@ -1,0 +1,16 @@
+<div class="home-container">
+    <iframe allowfullscreen="" height="360" src="{{ tem11.video | url }}" width="640"></iframe>
+    <div class="header-panel">
+        <img src="{{ tem11.header.img | url }}">
+        <h1>{{ tem11.header.title }}</h1>
+        <p>{{ tem11.header.desc }}</p>
+    </div>
+    <div class="sponsors-panel">
+        <h2>{{ tem11.sponsors.title }}</h2>
+        <div>
+            {% for sponsor in sponsors %}
+                <img src="{{ tem11.sponsors.links | url }}">
+            {% endfor %}
+        </div>
+    </div>
+</div>

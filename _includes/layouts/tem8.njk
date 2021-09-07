@@ -1,0 +1,22 @@
+<div class="navigation-container dis-flex">
+    <a href="#Panel{{ loop.index }}">{{section.links}}</a>
+</div>
+<div class="home-container dis-flex" id="Panel{{ loop.index }}">
+    <div class="text-container">
+        <img src="{{ tem8.section[1].img | url }}">
+        <h1>{{ tem8.section[1].title }}</h1>
+    </div>
+</div>
+<div class="home-container dis-flex" id="Panel{{ loop.index }}">
+    <div class="text-container">
+        <h1>{{ temp8.section[2].title }}</h1>
+        <p>{{ temp8.section[2].desc }}</p>
+    </div>
+</div>
+<div class="home-container dis-flex" id="Panel{{ loop.index }}">
+    <iframe allowfullscreen="" height="360" src="{{ temp8.section[3].video | url }}" width="640"></iframe>
+    <div class="text-container">
+        <h1>{{ temp8.section[3].title }}</h1>
+        <p>{{ temp8.section[3].desc }}</p>
+    </div>
+</div>

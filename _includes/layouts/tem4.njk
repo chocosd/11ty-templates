@@ -1,0 +1,28 @@
+<div class="home-container">
+    <div class="feature-panel">
+        <div class="title-container">
+            <img src="{{ placeholder | url }}">
+            <p>{{ title.note }}</p>
+        </div>
+        <div class="overlay">
+            <div class="arrow-container">
+                <div class="text-container">
+                    <h2>{{ section.title }}</h2>
+                    <span>{{ section.desc }}</span>
+                </div>
+                <img class="arrow" src="{{ section.arrow | url }}">
+            </div>
+        </div>    
+    </div>
+    <cc-open-module class="widget" id="{{ widget.link.id }}" style="background-image:url('{{ widget.image | url }}')">
+        <div class="gradient-container">
+            <div class="arrow-container">
+                <div class="text-container">
+                    <h2>{{ widget.title }}</h2>
+                    <span>{{ widget.desc }}</span>
+                </div>
+                <img class="arrow" src="{{ section.arrow | url }}">
+            </div>
+        </div>
+    </cc-open-module>
+</div>
