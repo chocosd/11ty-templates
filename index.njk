@@ -3,9 +3,40 @@ title: Template Builder
 layout: layouts/base.njk
 permalink: /
 ---
-    
+{% set css %}
+    {% include "./css/styles.css" %}
+{% endset %}
+<style type="text/css" scoped>
+    {{ css | safe }}
+</style>
+{% from "./macros/home_temlist_macros.njk" import widget %}
+<h1>{{ title }}</h1>
 <div class="menu-container dis-flex">
-    <section class="widget dis-flex" href="/{{ template.url }}">
-        <h2>{{ template.title }}</h2>
-    </section> 
+    <div class="widget-wrapper">
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 1", "The first of our brand new templates")}}
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 2", "the first template")}}
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 3", "the first template")}}
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 4", "the first template")}}
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 5", "the first template")}}
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 6", "the first template")}}
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 7", "the first template")}}
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 8", "the first template")}}
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 9", "the first template")}}
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 10", "the first template")}}
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 11", "the first template")}}
+    {{widget("./images/uploads/alpine-mountain-landscape-with-lake.jpeg", "active", "Template 12", "the first template")}}
+    </div>
 </div>
+<button class="arrow-prev">
+    <img src="./images/uploads/arrow-circle-up-solid.svg">
+</button>
+<button class="arrow-next">
+    <img src="./images/uploads/arrow-circle-down-solid.svg">
+</button>
+{% set js %}
+    {% include "./js/eventlisteners.js" %}
+{% endset %}
+<script>
+    {{ js | safe}}
+</script>
+{% set templates = collections %}

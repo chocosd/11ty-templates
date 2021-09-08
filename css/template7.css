@@ -1,1 +1,267 @@
 /* this is the stylesheet for template 7 */
+
+/*--------- Hide Navbar ----------*/
+
+.cc-cms-body-header ion-toolbar  {
+    --ion-color-base: rgba(0,0,0,0)!important;
+    }
+
+    cc-toolbar-left ion-button:nth-child(2) {
+        display:none;
+    }
+    
+    cc-toolbar-left ion-button,
+    cc-toolbar-right i {
+        color:var(--cc-card-background)!important;
+        --cc-text-on-primary-color:var(--cc-card-background)!important;
+    }
+    
+    .app__body {
+        margin-top:-56px!important;
+    }
+
+ /*-------------------------------*/
+ /*--------- Template 7 ----------*/
+ /*-------------------------------*/
+ /*Template Date: 19/08/2021*/
+ 
+    
+ /*--------- Scrollbar ----------*/
+    
+    /* width */
+    ::-webkit-scrollbar {
+      width: 6px!important;
+      transition:0.4s!important;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.2)!important; 
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.4)!important; 
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.6)!important; 
+    }
+
+    .home-container {
+        width:100%;
+        min-height:100%;
+        display:flex;
+        flex-direction:column;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    .header-panel, .meeting-panel {
+        width:100%;
+        min-height:400px;
+        display:flex;
+        align-items:center;
+    }
+    
+    .header-panel {
+        min-height:50vh;
+        justify-content:space-between;
+    }
+    
+    .header-panel img {
+        max-width:400px;
+        width:80%;
+        display:block;
+        flex-basis: 0;
+    }
+    
+    .header-text {
+        display:flex;
+        flex-direction:column;
+        width:440px;
+        margin-left:80px;
+        margin-top:24px;
+        color:var(--cc-text-on-primary-color);
+    }
+    
+    .header-text h1 {
+        margin-bottom:0px;
+    }
+    
+    .header-text p {
+        padding-left:16px;
+        border-left:4px solid var(--cc-accent-color);
+    }
+    
+    .meeting-panel {
+        justify-content:center;
+        flex-direction:column;
+        min-height:50vh;
+    }
+    
+    .h-slider {
+        width:90%;
+        overflow-x:scroll;
+        display:flex;
+        align-items:center;
+    }
+    
+    .meeting {
+        width:auto;
+        height:260px;
+        min-width: 360px;
+        background-color:var(--cc-primary-color);
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:center;
+        color:#fff;
+        margin:16px;
+        transition:0.4s;
+        cursor:pointer;
+    }
+    
+    .meeting h2 {
+        font-size:1.2em;
+        font-weight:700;
+        width:100%;
+        margin:0px;
+        position:absolute;
+        padding:24px;
+        color:#fff;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+    }
+    
+    .meeting .image {
+        width:100%;
+        height:70%;
+        background-size:cover;
+        background-position:center;
+    }
+    
+    .meeting-bar {
+        margin: auto auto;
+        width:90%;
+        height:20%;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+    }
+    
+    .meeting-bar p {
+        margin:0px;
+        font-size:0.8em;
+        max-width:180px;
+        color:var(--cc-text-on-primary-color);
+    }
+    
+    .cta {
+        width:140px;
+        height:40px;
+        background-color:var(--cc-accent-color);
+        color:var(--cc-text-on-accent-color);
+        border-radius:90px;
+        display:flex;
+        transition:0.3s;
+    }
+    
+    .cta span {
+        font-weight:700;
+        margin: auto auto;
+        width:100%;
+        text-align:center;
+    }
+    
+    .bottom-line {
+        width:60%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-top:24px;
+    }
+    
+    .bottom-line span {
+        width:100%;
+        font-weight:700;
+        margin-bottom:12px;
+        text-align:center;
+        color:var(--cc-text-on-primary-color);
+    }
+
+    
+ /*--------- Hover Effects ----------*/
+ 
+ 
+    @media (min-width: 420px) {
+        .meeting:hover .cta  {
+            background-color:var(--cc-text-on-accent-color);
+            color:var(--cc-accent-color);
+        }
+    
+    }
+    
+    .meeting:active .cta  {
+        background-color:var(--cc-text-on-accent-color);
+        color:var(--cc-accent-color);
+    }
+
+    
+/*--------- Small Screen &amp; Tablet Adjustments ----------*/
+    
+    @media (max-width: 1200px) { 
+    
+        
+        .header-panel {
+            justify-content:center;
+            align-items:center;
+        }
+        
+        .h-slider {
+            flex-direction:column;
+            margin-top:8px;
+            flex-direction:row;
+            flex-wrap:wrap;
+            justify-content:center;
+            width:100%;
+        }
+        
+        .bottom-line {
+            display:none;
+        }
+        
+        .header-text {
+            width:90%;
+            max-width:800px;
+            margin: 0 auto;
+            font-size:1.2em;
+        }
+        
+    
+    }
+    
+/*--------- Mobile Adjustments ----------*/
+    
+    @media (max-width: 720px) { 
+
+        .header-panel {
+            min-height:300px;
+        }
+        
+        .meeting {
+            min-width:200px;
+            width:90%;
+        }
+        
+        .header-text {
+            max-width:400px;
+            font-size:0.8em;
+        }
+        
+    }

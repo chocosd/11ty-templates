@@ -1,1 +1,170 @@
 /* this is the stylesheet for template 12 */
+
+/*--------- Hide Navbar ----------*/
+
+.cc-cms-body-header ion-toolbar  {
+    --ion-color-base: rgba(0,0,0,0)!important;
+    }
+
+    cc-toolbar-left ion-button:nth-child(2) {
+        display:none;
+    }
+    
+    cc-toolbar-left ion-button,
+    cc-toolbar-right i {
+        color:var(--cc-card-background)!important;
+        --cc-text-on-primary-color:var(--cc-card-background)!important;
+    }
+    
+    .app__body {
+        margin-top:-56px!important;
+    }
+    
+ /*-------------------------------*/
+ /*--------- Template 12 ----------*/
+ /*-------------------------------*/
+ /*Template Date: 19/08/2021*/
+
+    .home-container {
+        width:100%;
+        min-height:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    .logo-container,
+    .central-container,
+    .menu-container {
+        width:90%;
+        max-width:1200px;
+        margin:12px auto;
+        display:flex;
+    }
+    
+    .logo-container {
+        border-bottom:solid 2px var(--ion-color-accent);
+        align-items: flex-start;
+    }
+    
+    .logo-container img {
+        width:70%;
+        max-width:480px;
+        flex-basis:0;
+        display:block;
+        margin:40px 0;
+    }
+    
+    .central-container {
+        flex-wrap:wrap;
+    }
+    
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      width: 50%;
+      padding-top: 26%;
+    }
+    
+    .video-container iframe {
+        border:none!important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .text-container {
+        color:white;
+        width:50%;
+        min-width:300px;
+        padding-right:1rem;
+    }
+    
+    .text-container h1 {
+        text-transform:uppercase;
+        font-size:3em;
+        font-weight:700;
+    }
+    
+    .text-container h1 strong {
+        font-weight:300;
+    }
+    
+    .text-container p {
+        line-height:1.2em;
+    }
+    
+    .menu-container {
+        flex-wrap:wrap;
+        justify-content:space-around;
+        justify-content:space-between;
+    }
+    
+    .widget {
+        width:20%;
+        min-width:180px;
+        height:80px;
+        border-radius:90px;
+        background-color:var(--ion-color-accent);
+        color:var(--cc-accent-color-contrast);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-transform:uppercase;
+        font-weight:700;
+        font-size:1.4em;
+        transition:0.4s;
+        cursor:pointer;
+        margin:1rem;
+        box-shadow:0px 0px 16px rgba(0,0,0,0.3);
+    }
+    
+    cc-open-module:hover {
+        opacity:0.8;
+    }
+    
+    
+/*--------- Tablet Adjustments ----------*/
+    
+    @media (max-width: 902px) { 
+        
+        .logo-container {
+            margin-top:64px;
+        }
+        
+        .logo-container img {
+            width:80%;
+        }
+
+        .text-container {
+            width:80%;
+            margin-top:0px;
+        }
+        
+        .menu-container,
+        .footer-container{
+            justify-content:center;
+        }
+        
+        .content-container iframe {
+            width:90%;
+            max-width:400px;
+        }
+        
+        .home-container {
+            background-position:center;
+        }
+        
+        .widget {
+            width:260px;
+        }
+
+    }

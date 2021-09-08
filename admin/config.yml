@@ -16,9 +16,30 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Featured Image", name: "featuredImage", widget: "image" }
-      - label: Widget 1
-        name: widget 1
-        widget: list
+      - label: "Widget 1"
+        name: "widget1"
+        widget: "list"
+        max: 3
+        min: 3
+        fields:
+          - { label: "title", name: "title", widget: "string"}
+          - { label: "description", name: "description", widget: "string"}
+          - { label: "widget images", name: "widgetImg", widget: "image"}
+  - name: "template2"
+    label: "Template 2"
+    folder: "/template1"
+    create: true
+    slug: "{{ title }}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/tem1.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image" }
+      - label: "Widget 1"
+        name: "widget1"
+        widget: "list"
+        max: 3
+        min: 3
         fields:
           - { label: "title", name: "title", widget: "string"}
           - { label: "description", name: "description", widget: "string"}
