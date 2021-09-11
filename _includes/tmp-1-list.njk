@@ -1,0 +1,17 @@
+<h1>The start of bilding Template Lists</h1>
+
+<ul>
+    {% for post in tem1list %}
+        <li>
+            <strong>
+                <a href="{{ post.url | url }}">
+                    {{ post.data.title }}
+                </a>
+            </strong>
+            
+            <span>
+                {{ post.data.description }}
+            </span>
+        </li>
+    {% endfor %}
+</ul>

@@ -10,21 +10,39 @@ collections:
     label: "Template 1"
     folder: "/template1"
     create: true
-    slug: "{{ title }}"
+    slug: "{{ slug }}"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/tem1.njk" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Featured Image", name: "featuredImage", widget: "image" }
-      - label: "Widget 1"
-        name: "widget1"
+      - label: "Widgets"
+        name: "widgets"
         widget: "list"
         max: 3
         min: 3
         fields:
-          - { label: "title", name: "title", widget: "string"}
-          - { label: "description", name: "description", widget: "string"}
-          - { label: "widget images", name: "widgetImg", widget: "image"}
+          - label: "Widget 1"
+          name: "Widget1"
+          widget: "object"
+          fields:
+            - { label: "title", name: "title", widget: "string"}
+            - { label: "description", name: "description", widget: "string"}
+            - { label: "widget images", name: "widgetImg", widget: "image"}
+          - label: "Widget 2"
+          name: "Widget2"
+          widget: "object"
+          fields:
+            - { label: "title", name: "title", widget: "string"}
+            - { label: "description", name: "description", widget: "string"}
+            - { label: "widget images", name: "widgetImg", widget: "image"}
+          - label: "Widget 3"
+          name: "Widget3"
+          widget: "object"
+          fields:
+            - { label: "title", name: "title", widget: "string"}
+            - { label: "description", name: "description", widget: "string"}
+            - { label: "widget images", name: "widgetImg", widget: "image"}
   - name: "template2"
     label: "Template 2"
     folder: "/template1"
