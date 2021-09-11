@@ -19,8 +19,6 @@ collections:
       - label: "Widgets"
         name: "widgets"
         widget: "list"
-        max: 3
-        min: 3
         fields:
           - label: "Widget 1"
           name: "Widget1"
