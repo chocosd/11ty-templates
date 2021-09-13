@@ -1,0 +1,250 @@
+/* this is the stylesheet for template 10 */
+
+/*--------- Hide Navbar ----------*/
+
+.cc-cms-body-header ion-toolbar  {
+    --ion-color-base: rgba(0,0,0,0)!important;
+    }
+
+    cc-toolbar-left ion-button:nth-child(2) {
+        display:none;
+    }
+    
+    cc-toolbar-left ion-button,
+    cc-toolbar-right i {
+        color:var(--cc-card-background)!important;
+        --cc-text-on-primary-color:var(--cc-card-background)!important;
+    }
+    
+    .app__body {
+        margin-top:-56px!important;
+    }
+
+
+ /*-------------------------------*/
+ /*--------- Template 10 ----------*/
+ /*-------------------------------*/
+ /*Template Date: 19/08/2021*/
+ 
+ 
+    .dis-flex {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+    }
+    
+    .home-container {
+        width:100%;
+        min-height:100vh;
+        overflow-x:hidden;
+        flex-direction:column;
+        flex-wrap:nowrap;
+        position:relative;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image:url('https://media.crowdcomms.com/media/app_images/3f28e3ae67394d6aa164b7de188d6c02.jpg');
+        background-size:cover;
+    }
+    
+    .header-panel {
+        width:100%;
+        position:absolute;
+        top: 100px;
+    }
+    
+    .header-panel img {
+        width:80%;
+        max-width:460px;
+        display:block;
+    }
+    
+    .header-text {
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        max-width:400px;
+        margin-left:60px;
+        color:white;
+    }
+    
+    .logo {
+        position: absolute;
+        bottom: 130px;
+        right: 50px;
+    }
+    
+    .logo {
+        width:120px;
+        height:auto;
+    }
+    
+    .mobile-image {
+        display:none;
+    }
+    
+    .menu-container {
+        width:100%;
+        max-width:100vw;
+        background-color:var(--cc-card-background);
+        color:var(--cc-default-text-color);
+        position:absolute;
+        bottom:0px;
+        justify-content:space-around;
+        justify-content:space-evenly;
+    }
+    
+    .widget {
+        width: 14%;
+        height: 96px;
+        flex-direction: row;
+        transition: 0.4s;
+        cursor: pointer;
+        flex-wrap: nowrap;
+    }
+    
+    .icon-back {
+        width:60px;
+        min-width:60px;
+        height:60px;
+        margin-right:8px;
+        border-radius:50%;
+        background-color:var(--cc-accent-color);
+        color:var(--cc-text-on-accent-color);
+        flex-wrap: nowrap;
+        transition:all 0.4s;
+    }
+    
+    .icon-back i {
+        width:36px;
+        height:36px;
+        font-size:36px;
+    }
+    
+    .widget span {
+        text-transform:uppercase;
+        text-align:left;
+        font-size:0.9em;
+        font-weight:700;
+    }
+
+ /*--------- Hover Effects ----------*/
+ 
+    @media (min-width: 420px) {
+        .widget:hover  {
+           opacity:0.6;
+        }
+    }
+    
+    .widget:active  {
+       opacity:0.6;
+    }
+
+
+/*--------- Tablet Adjustments ----------*/
+    
+    @media (max-width: 960px) { 
+        
+        .cc-navbar-content {
+            background:#000!important;
+        }
+        
+        .home-container {
+            background-image:none!important;
+            margin-top:54px;
+            height:auto;
+        }
+        
+        .mobile-image {
+            display:block;
+            order:1;
+        }
+        
+        .menu-container {
+            width:100%;
+            position:static;
+            justify-content:center;
+        }
+        
+        .header-panel {
+            position:static;
+        }
+        
+        .widget {
+            width: 25%;
+            height: 12vw;
+            margin: 16px;
+            flex-direction: column;
+        }
+        
+        .widget span {
+            margin-top:12px;
+            text-align:center;
+        }
+        
+        .logo {
+            display:none;
+        }
+        
+        .icon-back {
+            width:50px;
+            min-width:50px;
+            height:50px;
+        }
+        
+        .icon-back i {
+            width:30px;
+            height:30px;
+            font-size:30px
+        }
+        
+        .header-text {
+            max-width:800px;
+            font-size:2em;
+        }
+        
+        .header-text p {
+            padding:0;
+        }
+        
+    }
+    
+    
+/*--------- Mobile Adjustments ----------*/
+    
+    @media (max-width: 720px) { 
+        
+        .home-container {
+            height:auto;
+        }
+        
+        .widget {
+            width: 40%;
+            height: 30vw;
+            margin: 12px;
+        }
+        
+        .icon-back {
+            width:50px;
+            min-width:50px;
+            height:50px;
+        }
+        
+        .icon-back i {
+            width:30px;
+            height:30px;
+            font-size:30px
+        }
+        
+        .header-text {
+            width:90%;
+            margin: 0 auto;
+            max-width:640px;
+            font-size:1.2em;
+        }
+        
+    }

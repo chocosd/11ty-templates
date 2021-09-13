@@ -1,0 +1,12 @@
+---
+title: template 1 list
+layout: 'layouts/base.njk'
+---     
+
+{%- for templates in collections.all | reverse -%}
+<a href="{{ templates.url }}">
+    <article>
+        <h2>{{ templates.data.title }}</h2>
+    </article>
+</a>
+{%- endfor -%}

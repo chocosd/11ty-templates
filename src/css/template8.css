@@ -1,0 +1,133 @@
+/* this is the stylesheet for template 8 */
+
+
+/*--------- Hide Navbar ----------*/
+
+.cc-cms-body-header ion-toolbar  {
+    --ion-color-base: rgba(0,0,0,0)!important;
+    }
+
+    cc-toolbar-left ion-button:nth-child(2) {
+        display:none;
+    }
+    
+    cc-toolbar-left ion-button,
+    cc-toolbar-right i {
+        color:var(--cc-card-background)!important;
+        --cc-text-on-primary-color:var(--cc-card-background)!important;
+    }
+    
+    .app__body {
+        margin-top:-56px!important;
+    }
+    
+    
+ /*-------------------------------*/
+ /*--------- Template 8 ----------*/
+ /*-------------------------------*/
+ /*Template Date: 19/08/2021*/
+ 
+
+
+    .dis-flex {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+    }
+    
+    .home-container {
+        width:100%;
+        height:100vh;
+        overflow-x:hidden;
+        flex-direction:column;
+        flex-wrap:nowrap;
+        justify-content:flex-end;
+        align-items:flex-start;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-size:cover;
+        scroll-behavior: smooth;
+    }
+    
+    .navigation-container {
+        position:fixed;
+        bottom:40px;
+        right:40px;
+        flex-direction:column;
+        align-items:flex-start;
+        background-color:rgba(0,0,0,0.6);
+        color:white;
+        display:none;
+    }
+    
+    .navigation-container a {
+        text-decoration:none;
+        width:100%;
+        font-size:1.2em;
+        padding:1.6rem;
+        transition:0.4s ease-out;
+        color:var(--cc-text-on-primary-color)!important;
+    }
+    
+    .navigation-container a:hover {
+        background-color:var(--ion-color-accent);
+        color:var(--ion-color-accent-contrast);
+    }
+    
+    #Panel1 {
+        background-image:url('https://media.crowdcomms.com/media/app_images/9c4118dfe49c49c8a76e012f349ac7c5.JPG');
+    }
+    
+    #Panel2 {
+        background-image:url('https://media.crowdcomms.com/media/app_images/ad16787e9c7649aa8300f08f97e63a13.JPG');
+    }
+    
+    #Panel3 {
+        background-image:url('https://media.crowdcomms.com/media/app_images/b56564ce68e540f2a02cddae1f8e05e9.JPG');
+    }
+    
+    .text-container {
+       width:80%;
+       max-width:500px;
+       margin-left:40px;
+       margin-bottom:40px;
+       color:var(--cc-text-on-primary-color);
+       background-color:rgba(0,0,0,0.6);
+       padding:2rem;
+    }
+    
+    .text-container h1 {
+        font-size:1.8em;
+    }
+    
+    .text-container p {
+        padding-left:1rem;
+        border-left:4px solid var(--ion-color-accent);
+    }
+    
+    iframe {
+        margin: auto 40px;
+        border: 0px solid transparent;
+    }
+    
+    
+/*--------- Mobile Adjustments ----------*/
+    
+    @media (max-width: 800px) { 
+        
+        .navigation-container {
+            bottom:initial;
+            top:56px;
+        }
+        
+        iframe {
+            width:100%;
+            margin:0 auto;
+        }
+        
+    }

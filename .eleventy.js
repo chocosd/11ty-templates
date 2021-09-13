@@ -1,9 +1,16 @@
 module.exports = (eleventyConfig) =>{
-    eleventyConfig.addPassthroughCopy("images")
-    eleventyConfig.addPassthroughCopy("admin")
-    eleventyConfig.addPassthroughCopy("./css")
-    eleventyConfig.addPassthroughCopy("./css/globals.css")
-    eleventyConfig.addWatchTarget("./css")
-    eleventyConfig.addWatchTarget("./css/globals.css")
+
+    
+    eleventyConfig.addPassthroughCopy('./src/css');
+    eleventyConfig.addPassthroughCopy('./src/js');
+    eleventyConfig.addPassthroughCopy('./src/assets');
+    eleventyConfig.addPassthroughCopy('./src/_data');
+    
+    return {
+        dir: {
+            input: "src",
+            output: "public"
+        }
+    }
 }
 

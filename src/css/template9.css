@@ -1,0 +1,144 @@
+/* this is the stylesheet for template 9 */
+
+
+/*--------- Hide Navbar ----------*/
+
+.cc-cms-body-header ion-toolbar  {
+    --ion-color-base: rgba(0,0,0,0)!important;
+    }
+
+    cc-toolbar-left ion-button:nth-child(2) {
+        display:none;
+    }
+    
+    cc-toolbar-left ion-button,
+    cc-toolbar-right i {
+        color:var(--cc-card-background)!important;
+        --cc-text-on-primary-color:var(--cc-card-background)!important;
+    }
+    
+    .app__body {
+        margin-top:-56px!important;
+    }
+
+ /*-------------------------------*/
+ /*--------- Template 9 ----------*/
+ /*-------------------------------*/
+ /*Template Date: 19/08/2021*/
+ 
+ 
+  .home-container {
+        width:100%;
+        min-height:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-tems:center;
+        user-select: none;
+        background-size:cover;
+        scroll-behavior: smooth;
+  }
+    
+   .header-panel {
+        display:flex;
+        margin:40px auto;
+        align-items:center;
+        width:90%;
+        max-width:600px;
+        color:white;
+        font-size:1.2em;
+        text-align:center;
+   }
+
+    .header-panel img {
+        padding-bottom: 1rem;
+        margin:0 auto;
+        width:90%;
+        max-width:400px;
+   }
+    
+    .menu-container {
+        justify-content:center;
+        display:flex;
+        flex-wrap: wrap;
+        max-width:1000px;
+        margin:0 auto;
+    }
+    
+   .widget {
+        height:200px;
+        width: 200px;
+        margin:1rem;
+        display:flex;
+        background-position:center;
+        background-size:cover;
+        border-radius:10px;
+        box-shadow: 0px 0px 16px rgba(0,0,0,0.2);
+   }
+
+   .cta {
+        width:180px;
+        min-height:30px;
+        background-color:var(--ion-color-accent);
+        color:var(--ion-color-accent-contrast);
+        border-radius:10px;
+        display:flex;
+        align-self:flex-end;
+        margin:1rem;
+        transition:0.4s ease-out;
+        cursor:pointer;
+    }
+    
+    .cta span {
+        font-weight:700;
+        margin: auto auto;
+        width:100%;
+        text-align:center;
+        padding:8px;
+    }
+   
+   
+ /*--------- Hover Effects ----------*/
+ 
+ 
+    @media (min-width: 420px) {
+        .widget:hover .cta  {
+            background-color:var(--ion-item-background);
+            color:var(--ion-item-color);
+        }
+    }
+    
+    .widget:active .cta  {
+        background-color:var(--ion-item-background);
+        color:var(--ion-item-color);
+    }
+    
+/*--------- Small Screen Adjustments ----------*/
+    
+    @media (max-width: 1300px) { 
+         .header-content {
+            width:90%;
+            max-width:800px;
+            font-size:0.8em;
+        }
+    }
+    
+/*--------- Mobile Adjustments ----------*/
+    
+    @media (max-width: 720px) { 
+        
+        .header-panel {
+            padding-top:16px;
+            flex-wrap: wrap;
+        }
+        .header-panel img {
+            margin:0 auto;
+        }
+        
+        .widget {
+            height:160px;
+            width:160px;
+            margin:0.6rem;
+        }
+        
+    }
