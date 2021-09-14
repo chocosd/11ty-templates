@@ -1,9 +1,9 @@
 ---
-title: template 1 list
+title: template 2 list
 layout: 'layouts/base.njk'
 ---     
 
-{%- for templates in collections.template1 | reverse -%}
+{%- for templates in collections.template2 | reverse -%}
 <a href="{{ templates.url }}">
     <article>
         <h2>{{ templates.data.title }}</h2>

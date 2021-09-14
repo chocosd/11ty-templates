@@ -29,38 +29,14 @@ layout: 'layouts/base.njk'
                     <source src="{{ titleVideo | url }}" type="video/mp4">
                 </video>                
                 </div>
-
                 <div class="menu-container">
-                    <cc-open-module class="widget" id="">
-                        <div class="widget-image" style="background-image:url('{{ widget1Img | url }}');"></div>
-                        <h2>{{ widget1Name }}</h2>
-                        <img class="arrow" src="{{ widgetArrow | url }}">
-                    </cc-open-module>
-                    <cc-open-module class="widget" id="">
-                        <div class="widget-image" style="background-image:url('{{ widget2Img | url }}');"></div>
-                        <h2>{{ widget2Name }}</h2>
-                        <img class="arrow" src="{{ widgetArrow | url }}">
-                    </cc-open-module>
-                    <cc-open-module class="widget" id="">
-                        <div class="widget-image" style="background-image:url('{{ widget3Img | url }}');"></div>
-                        <h2>{{ widget3Name }}</h2>
-                        <img class="arrow" src="{{ widgetArrow | url }}">
-                    </cc-open-module>
-                    <cc-open-module class="widget" id="">
-                        <div class="widget-image" style="background-image:url('{{ widget4Img | url }}');"></div>
-                        <h2>{{ widget4Name }}</h2>
-                        <img class="arrow" src="{{ widgetArrow | url }}">
-                    </cc-open-module>
-                    <cc-open-module class="widget" id="">
-                        <div class="widget-image" style="background-image:url('{{ widget5Img | url }}');"></div>
-                        <h2>{{ widget5Name }}</h2>
-                        <img class="arrow" src="{{ widgetArrow | url }}">
-                    </cc-open-module>
-                    <cc-open-module class="widget" id="">
-                        <div class="widget-image" style="background-image:url('{{ widget6Img | url }}');"></div>
-                        <h2>{{ widget6Name }}</h2>
-                        <img class="arrow" src="{{ widgetArrow | url }}">
-                    </cc-open-module>
+                    {%- for widget in widgets -%}
+                        <cc-open-module class="widget" id="">
+                            <div class="widget-image" style="background-image:url('{{ widget.widgetImage | url }}');"></div>
+                            <h2>{{ widget.widgetName }}</h2>
+                            <img class="arrow" src="{{ widgetArrow | url }}">
+                        </cc-open-module>
+                    {%- endfor -%}
                 </div>
             </div>
         </div>

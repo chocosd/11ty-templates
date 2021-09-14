@@ -11,16 +11,17 @@ titleDescription: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perfe
 primaryCTA: HELPDESK
 primaryCTADescription: Need help finding your way around? Get in touch with one of our team
 widgetArrow: /assets/images/uploads/f63a7b49cd4d4f34b367a0ad9990deac.png
-widget1Name: Agenda
-widget1Img: /assets/images/uploads/7350f6ff357c4050baf911151a4e7c1b.jpeg
-widget2Name: Main Stage
-widget2Img: /assets/images/uploads/06e449b24f264868897cde5eca470e78.jpeg
-widget3Name: Attendees
-widget3Img: /assets/images/uploads/1a1733cf07ce4044ab534eea1df3e491.jpeg
-widget4Name: Event Game
-widget4Img: /assets/images/uploads/79ba227805844b2997b2804ec22d3d46.jpeg
-widget5Name: Speakers
-widget5Img: /assets/images/uploads/1b572de800f2414984d448b2a2ce3039.jpeg
-widget6Name: Feedback Survey
-widget6Img: /assets/images/uploads/5149b2968a6c4833912fcbef62ee9b8f.png
+widgets:
+- widgetName: Agenda
+  widgetImage: /assets/images/uploads/7350f6ff357c4050baf911151a4e7c1b.jpeg
+- widgetName: Main Stage
+  widgetImage: /assets/images/uploads/06e449b24f264868897cde5eca470e78.jpeg
+- widgetName: Attendees
+  widgetImage: /assets/images/uploads/1a1733cf07ce4044ab534eea1df3e491.jpeg
+- widgetName: Event Game
+  widgetImage: /assets/images/uploads/79ba227805844b2997b2804ec22d3d46.jpeg
+- widgetName: Speakers
+  widgetImage: /assets/images/uploads/1b572de800f2414984d448b2a2ce3039.jpeg
+- widgetName: Survey
+  widgetImage: /assets/images/uploads/5149b2968a6c4833912fcbef62ee9b8f.png
 ---

@@ -10,53 +10,36 @@ collections:
     label: "template1"
     folder: "/template1"
     create: true
-    slug: "{{ slug }}"
+    slug: "{{title}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/tem1.njk" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Featured Image", name: "featuredImage", widget: "image" }
-      - label: "Widgets"
-        name: "widgets"
-        widget: "list"
-        fields:
-          - label: "Widget 1"
-          name: "Widget1"
-          widget: "object"
-          fields:
-            - { label: "title", name: "title", widget: "string"}
-            - { label: "description", name: "description", widget: "string"}
-            - { label: "widget images", name: "widgetImg", widget: "image"}
-          - label: "Widget 2"
-          name: "Widget2"
-          widget: "object"
-          fields:
-            - { label: "title", name: "title", widget: "string"}
-            - { label: "description", name: "description", widget: "string"}
-            - { label: "widget images", name: "widgetImg", widget: "image"}
-          - label: "Widget 3"
-          name: "Widget3"
-          widget: "object"
-          fields:
-            - { label: "title", name: "title", widget: "string"}
-            - { label: "description", name: "description", widget: "string"}
-            - { label: "widget images", name: "widgetImg", widget: "image"}
-  - name: "template2"
-    label: "Template 2"
-    folder: "/template1"
-    create: true
-    slug: "{{ title }}"
-    fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/tem1.njk" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Featured Image", name: "featuredImage", widget: "image" }
-      - label: "Widget 1"
-        name: "widget1"
-        widget: "list"
-        max: 3
-        min: 3
-        fields:
-          - { label: "title", name: "title", widget: "string"}
-          - { label: "description", name: "description", widget: "string"}
-          - { label: "widget images", name: "widgetImg", widget: "image"}
+    - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/tem1.njk" }
+    - { label: "Title", name: "layout", widget: "string" }
+    - { label: "Background Image", name: "backgroundImage", widget: "image" }
+    - { label: "Title Logo", name: "titleLogo", widget: "image" }
+    - { label: "Title Description", name: "titleDescription", widget: "string" }
+    - { label: "Title Video Poster", name: "titleVideoPoster", widget: "image" }
+    - { label: "Title Video Poster", name: "titleVideoPoster", widget: "image" }
+    - { label: "Primary CTA", name: "primaryCTA", widget: "string" }
+    - { label: "Primary CTA Description", name: "primaryCTADescription", widget: "string" }
+    - { label: "Widget Arrow", name: "widgetArrow", widget: "image", default: "" }
+    - label: "Title Video"
+      name: "titleVideo"
+      widget: "file"
+      default: "https://player.vimeo.com/external/477725158.hd.mp4?s=bb269ea949d5560afa83f8d32a420cecf75e532f&profile_id=175"
+      media_library:
+        config:
+          multiple: false
+    - label: "Widgets"
+      name: "widgets"
+      widget: "list"
+      collapsed: false
+      fields:
+        - { label: "Widget Name", name: "widgetName", widget: "string" }
+        - { label: "Widget Image", name: "widgetImage", widget: "image" }
+      default:
+        - { widgetName: "Agenda", widgetImage: "https://media.crowdcomms.com/media/app_images/7350f6ff357c4050baf911151a4e7c1b.jpg" }
+        - { widgetName: "Main Stage", widgetImage: "https://media.crowdcomms.com/media/app_images/06e449b24f264868897cde5eca470e78.jpg" }
+        - { widgetName: "Attendees", widgetImage: "https://media.crowdcomms.com/media/app_images/1a1733cf07ce4044ab534eea1df3e491.jpg" }
+        - { widgetName: "Event Game", widgetImage: "https://media.crowdcomms.com/media/app_images/79ba227805844b2997b2804ec22d3d46.jpg" }
+        - { widgetName: "Speakers", widgetImage: "https://media.crowdcomms.com/media/app_images/1b572de800f2414984d448b2a2ce3039.jpg" }
+        - { widgetName: "Survey", widgetImage: "https://media.crowdcomms.com/media/app_images/5149b2968a6c4833912fcbef62ee9b8f.png" }
