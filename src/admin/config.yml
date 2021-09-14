@@ -1,9 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-
 media_folder: "_site/assets/images/uploads"
-public_folder: "/images/uploads"
+public_folder: "assets/images/uploads"
 
 collections:
   - name: "template1"
@@ -21,7 +20,7 @@ collections:
     - { label: "Title Video Poster", name: "titleVideoPoster", widget: "image" }
     - { label: "Primary CTA", name: "primaryCTA", widget: "string" }
     - { label: "Primary CTA Description", name: "primaryCTADescription", widget: "string" }
-    - { label: "Widget Arrow", name: "widgetArrow", widget: "image", default: "" }
+    - { label: "Widget Arrow", name: "widgetArrow", widget: "image" }
     - label: "Title Video"
       name: "titleVideo"
       widget: "file"
