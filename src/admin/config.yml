@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+
 media_folder: "_site/assets/images/uploads"
 public_folder: "assets/images/uploads"
 
@@ -12,11 +13,10 @@ collections:
     slug: "{{title}}"
     fields:
     - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/tem1.njk" }
-    - { label: "Title", name: "layout", widget: "string" }
+    - { label: "Title", name: "title", widget: "string" }
     - { label: "Background Image", name: "backgroundImage", widget: "image" }
     - { label: "Title Logo", name: "titleLogo", widget: "image" }
     - { label: "Title Description", name: "titleDescription", widget: "string" }
-    - { label: "Title Video Poster", name: "titleVideoPoster", widget: "image" }
     - { label: "Title Video Poster", name: "titleVideoPoster", widget: "image" }
     - { label: "Primary CTA", name: "primaryCTA", widget: "string" }
     - { label: "Primary CTA Description", name: "primaryCTADescription", widget: "string" }
