@@ -5,30 +5,33 @@
     {{ css | safe }}
 </style>
 <div class="home-container">
-    <div class="feature-panel">
+    <div class="feature-panel" style="background-image:url('{{ widgets[0].widgetImage | url }}');">
         <div class="title-container">
-            <img src="{{ placeholder | url }}">
-            <p>{{ title.note }}</p>
+            <img src="{{ titleLogo | url }}">
+            <p>{{ titleDescription }}</p>
         </div>
         <div class="overlay">
             <div class="arrow-container">
                 <div class="text-container">
-                    <h2>{{ section.title }}</h2>
-                    <span>{{ section.desc }}</span>
+                    <h2>{{ widgets[0].widgetName }}</h2>
+                    <span>{{ widgets[0].widgetDescription }}</span>
                 </div>
-                <img class="arrow" src="{{ section.arrow | url }}">
+                <img class="arrow" src="{{ widgetArrow | url }}">
             </div>
         </div>    
     </div>
-    <cc-open-module class="widget" id="{{ widget.link.id }}" style="background-image:url('{{ widget.image | url }}')">
+    {%- for i in range(1, widgets.length) -%}
+    {% set widget = widgets[i] %}
+    <cc-open-module class="widget" id="xxxxx" style="background-image:url('{{ widget.widgetImage | url }}')">
         <div class="gradient-container">
             <div class="arrow-container">
                 <div class="text-container">
-                    <h2>{{ widget.title }}</h2>
-                    <span>{{ widget.desc }}</span>
+                    <h2>{{ widget.widgetName }}</h2>
+                    <span>{{ widget.widgetDescription }}</span>
                 </div>
-                <img class="arrow" src="{{ section.arrow | url }}">
+                <img class="arrow" src="{{ widgetArrow | url }}">
             </div>
         </div>
     </cc-open-module>
+    {% endfor %}
 </div>

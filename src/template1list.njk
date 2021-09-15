@@ -1,12 +1,13 @@
 ---
 title: template 1 list
 layout: 'layouts/base.njk'
----     
-
-{%- for templates in collections.template1 | reverse -%}
-<a href="{{ templates.url }}">
-    <article>
-        <h2>{{ templates.data.title }}</h2>
-    </article>
-</a>
-{%- endfor -%}
+---
+<section class="template-article_list">
+    {%- for templates in collections.template1 | reverse -%}
+        <a class="template-article_item" href="{{ templates.url }}" style="background-image:url('{{ templates.data.backgroundImage }}')">
+            <article class="template-article_inner">
+                <h2>{{ templates.data.title }}</h2>
+            </article>
+        </a>
+    {%- endfor -%}
+</section>

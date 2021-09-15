@@ -1,21 +1,24 @@
+---
+layout: 'layouts/base.njk'
+---
+{% include "layouts/fake-sidenav.njk" %}
+<div class="copy-html-container">
 {% set css %}
-    {% inclue "/css/template3.css" %}
+    {% include "template3.css" %}
 {% endset %}
 <style>
     {{ css | safe }}
 </style>
 <div class="home-container">     
     <div class="widget title-box">
-        <img src="{{ logo | url }}">
-        <p>{{ title }}</p>
+        <img src="{{ titleLogo | url }}">
+        <p>{{ titleDescription }}</p>
     </div>
-    <div class="image-box" style="background-image:url('{{ imagebox.images | url }}')"></div>
+    {%- for widget in widgets -%}
+    <div class="image-box" style="background-image:url('{{ widget.data.widgetImage | url }}')"></div>
     <cc-open-module class="widget text-box" id="xxxxx">
-        <p>{{ widget.desc }}</p>
-        <div class="header-box">
-            <h2>{{ widget.title }}</h2>
-            <img class="arrow" src="{{ widget.cta | url }}">
-        </div>
+        <p>{{ widget.data.widgetDescription }}</p>
+        <div class="header-box"><h2>{{ widget.data.widgetName }}</h2><img class="arrow" src="{{ widgetArrow | url }}"></div>
     </cc-open-module>
-    <div class="image-box" style="background-image:url('{{ imagebox.images | url }}')"></div>
+    {%- endfor -%}
 </div>

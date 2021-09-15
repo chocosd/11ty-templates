@@ -1,33 +1,49 @@
-{% from "/macros/tem2_macros.njk" import overlay %}
+---
+layout: 'layouts/base.njk'
+---
+{% from "macros/tem2_macros.njk" import overlay %}
+{% include "layouts/fake-sidenav.njk" %}
+<div class="copy-html-container">
 {% set css %}
-    {% inclue "/css/template2.css" %}
+    {% include "template2.css" %}
 {% endset %}
-
+<style>
     {{ css | safe }}
-
+</style>
 <div class="home-container">
-    <div class="feature-panel">
+    <div class="feature-panel" style="background-image:url('{{ widgets[0].widgetImage | url }}');">
         <div class="title-container">
-            <img src="{{ widgets.logo | url }}">
-            <p>{{ widgets.mainDesc }}</p>
+            <img src="{{ titleLogo | url }}">
+            <p>{{ titleDescription }}</p>
         </div>
-        {{ overlay({{widgets.title}}, {{widgets.desc}}, {{widgets.arrow | url}}) }}
+        {{ overlay( widgets[0].widgetName, widgets[0].widgetDescription, widgetArrow | url) }}
     </div>
     
     <div class="large-panel">
-        {{ overlay({{widgets.title}}, {{widgets.desc}}, {{widgets.arrow | url}}) }}
+        {{ overlay( widgets[1].widgetName, widgets[1].widgetDescription, widgetArrow | url) }}
     </div>
-    <!-- {% for widget in widgets %} -->
-    <cc-open-module class="widget" id="xxxxx" style="background-image:url('{{ widgets.background | url }}')">
+    {%- for i in range(2, widgets.length) -%}
+    {% set widget = widgets[i] %}
+    <cc-open-module class="widget" id="xxxxx" style="background-image:url('{{ widget.widgetImage | url }}')">
         <div class="gradient-container">
             <div class="arrow-container">
                 <div class="text-container">
-                    <h2>{{ widgets.title }}</h2>
-                    <span>{{ widgets.desc }}</span>
+                    <h2>{{ widget.widgetName }}</h2>
+                    <span>{{ widget.widgetDescription }}</span>
                 </div>
-                <img class="arrow" src="{{ widgets.arrow | url }}">
+                <img class="arrow" src="{{ widgetArrow | url }}">
             </div>
         </div>
     </cc-open-module>
-    <!-- {% endfor %} -->
+    {% endfor %}
 </div>
+</div>
+<button class="copy-html-button">
+    copy to clipboard
+</button>
+{% set js %}
+    {% include "copyToClipboard.js" %}
+{% endset %}
+<script>
+    {{ js | safe}}
+</script>

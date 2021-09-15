@@ -30,7 +30,8 @@ html, body {
     position: fixed;
     z-index: 2;
     top: 50%;
-    left: 50%;
+    left: 0;
+    transform: translateX(50%);
 }
 
 .content {
@@ -115,4 +116,64 @@ html, body {
     font-size: .8rem;
     text-transform: uppercase;
     font-weight: 300;
+}
+
+.template-article_item {
+    height: 200px;
+    width: 30%;
+    margin-right: calc(10%  / 3);
+    text-decoration: none;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.template-article_inner {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s background-color;
+}
+
+.template-article_item:hover .template-article_inner {
+    background-color: rgba(37, 124, 91, 0.486);
+    
+    transition: 1s background-color;
+}
+
+.template-article_list {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 4rem;
+}
+
+.template-article_item h2 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.fake-sidenav {
+    background:#001628;
+    height: 100%;
+    width: 320px;
+    position: absolute;
+    left: 0;
+    top: 0;   
+}
+.copy-html-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: calc(100vw - 320px);
+    height: calc(100% - 68px);
 }
