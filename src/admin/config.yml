@@ -8,7 +8,7 @@ public_folder: "assets/images/uploads"
 collections:
   - name: "template1"
     label: "template 1"
-    folder: "template1"
+    folder: "/src/template1"
     create: true
     slug: "{{day}}-{{month}}-{{year}}-{{slug}}"
     fields:
